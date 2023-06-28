@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 390px) {
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        overflow: hidden;
+    }
+    .navbar {
+        overflow: hidden;
+        background-color: #f7e9ff;
+        /* Soft purple color */
+        font-family: 'Roboto', sans-serif;
+        width: 100%;
+        z-index:2;
+    }
+    
+    .navbar a {
+        float: left;
+        font-size: 2vw;
+        color: #6b387e;
+        /* Darker purple color */
+        text-align: center;
+        padding: 1.4vw 1.6vw;
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .bio {
+        float: left;
+        overflow: hidden;
+    }
+    
+    .bio .dropbutton {
+        font-size: 2vw;
+        border: none;
+        outline: none;
+        color: #6b387e;
+        /* Darker purple color */
+        padding: 1.4vw 1.6vw;
+        background-color: inherit;
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+    }
+    
+    .navbar a:hover,
+    .bio:hover .dropbutton {
+        background-color: #e7fdd4;
+        /* Light green color */
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #fff9db;
+        /* Pale yellow color */
+        min-width: 16vw;
+        box-shadow: 0px 0.8vw 1.6vw 0px rgba(0, 0, 0, 0.2);
+        z-index: 3;
+    }
+    
+    .dropdown-content a {
+        float: none;
+        color: #6b387e;
+        /* Darker purple color */
+        padding: 1.2vw 1.6vw;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    
+    .dropdown-content a:hover {
+        background-color: #f0fff0;
+        /* Pale green color */
+    }
+    
+    .bio:hover .dropdown-content {
+        display: block;
+    }
+    
+    
+    .baby-hand video {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .title-name {
+        position: absolute;
+        font-family: 'Lato', sans-serif;
+        bottom: 5vw;
+        right: 3vw;
+        z-index: 3;
+        color: black;
+        padding: 2vw;
+        background-color: rgba(247, 233, 255, 0.2);
+        font-size: 13vw;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .title-name:hover {
+        box-shadow: 0 0 4vw 2vw rgba(255, 255, 255, 0.9);
+        text-shadow: 0.4vw 0.4vw 0.8vw #008080;
+    }
+
+    .title-name::after {
+        content: '';
+        position: absolute;
+        top: -2vw;
+        left: -2vw;
+        right: -2vw;
+        bottom: -2vw;
+        background-color: rgba(255, 255, 255, 0.3);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .title-name:hover::after {
+        opacity: 1;
+    }
+
+}

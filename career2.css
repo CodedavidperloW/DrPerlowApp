@@ -1,0 +1,1483 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #FFC3A0;
+}
+
+.navbar {
+	overflow: hidden;
+	background-color: #f7e9ff;
+	font-family: 'Roboto', sans-serif;
+	width: 100%;
+	z-index: 2;
+}
+
+.navbar a {
+	float: left;
+	font-size: 2vw;
+	color: #6b387e;
+	text-align: center;
+	padding: 1.4vw 1.6vw;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+}
+
+.bio {
+	overflow: hidden;
+}
+
+.bio .dropbutton {
+	font-size: 2vw;
+	border: none;
+	outline: none;
+	color: #6b387e;
+	padding: 1.4vw 1.6vw;
+	background-color: inherit;
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+}
+
+.navbar a:hover,
+.bio:hover .dropbutton {
+	background-color: #e7fdd4;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #fff9db;
+	min-width: 16vw;
+	box-shadow: 0px 0.8vw 1.6vw 0px rgba(0, 0, 0, 0.2);
+	z-index: 3;
+}
+
+.dropdown-content a {
+	float: none;
+	color: #6b387e;
+	padding: 1.2vw 1.6vw;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown-content a:hover {
+	background-color: #f0fff0;
+}
+
+.bio:hover .dropdown-content {
+	display: block;
+}
+
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(184, 39, 39, 0.8);
+  /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  height: 40vh;
+  margin-top: rem;
+  background-color: rgba(144, 195, 212, 0.5);
+  /* Adjust the color and opacity as desired */
+}
+
+.counter {
+  font-size: 4vw;
+  font-family: 'Fredoka One', cursive;
+  margin-top: 4rem;
+  margin-bottom: 10px;
+  color: rgba(255, 192, 203, 0.8);
+  background-color: hsla(180, 100%, 50%, 0.5);
+  text-shadow: 1px .5px 2px black;
+  padding: 5px 10px;
+  /* Add some padding for better readability */
+  border-radius: 5px;
+  /* Apply a slight border radius for a softer look */
+  opacity: 0.9;
+  /* Adjust opacity as desired */
+}
+
+.counter-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: .3vw;
+  animation: fade-in-out 4s linear infinite;
+  opacity: 0;
+}
+
+.counter-label {
+  font-size: 4vw;
+  font-family: 'Great Vibes', cursive;
+  padding: 1rem;
+  color: rgba(255, 255, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Animation properties */
+  animation-name: backgroundGrow;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+
+
+@keyframes backgroundGrow {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+@keyframes fade-in-out {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  10%,
+  90% {
+    opacity: 1;
+  }
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(144, 195, 212, 0.5);
+  padding: 2rem;
+}
+
+.event {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 1rem;
+  height: 18rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.event-image {
+  width: auto 0;
+  margin-right: 1rem;
+  margin-bottom: 3rem;
+}
+
+.event-image .image-wrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.event-image .image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-content {
+  width: 75%;
+  text-align: right;
+  margin-right: 3rem;
+}
+
+.event-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #6b387e;
+}
+
+.event-content p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.event-image .special-image1 {
+  margin-top: 4vh;
+}
+
+.timeline img {
+  margin-top: 4vh;
+  margin-left: 5vw;
+}
+
+.event-content h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+
+.event-content p {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(108, 39, 218);
+  font-weight: bold;
+  text-align: right;
+}
+
+
+@media screen and (max-width: 1280px) {
+  .navbar a,
+  .bio .dropbutton {
+    font-size: 5.25vw;
+    padding: 3.2vw 3vw;
+  }
+
+  .dropdown-content {
+    min-width: 48vw;
+    box-shadow: 0px 0.8vw 1.6vw 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown-content a {
+    padding: 3.6vw 4.8vw;
+  }
+
+  .container {
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    height: auto; /* Adjust the height as needed */
+    background-color: rgba(144, 195, 212, 0.5);
+    
+    /* Adjust the color and opacity as desired */
+  }
+  
+  .counter {
+    font-size: 8vw;
+     /* Adjust the font size using vw units */
+    margin-top: 2rem; /* Adjust the margin as needed */
+    padding: 3px 6px; /* Adjust the padding as needed */
+    border-radius: 5px;
+    /* Apply a slight border radius for a softer look */
+  }
+  
+  .counter-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vw;
+    animation: fade-in-out 4s linear infinite;
+    opacity: 0;
+  }
+
+  .counter-label {
+padding:.5rem;
+margin-bottom: 1vh;
+font-size: 3.5rem; 
+}
+
+.timeline {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.event {
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  height: auto;
+  padding: 1rem;
+}
+
+.event-image img {
+  margin-left: 5.5vw;
+  width: 28rem;
+} 
+
+.event-content {
+  width: 100%;
+  text-align: left;
+  margin-right: 0;
+
+}
+
+.event-content h3 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #6b387e;
+  text-align: center;
+  margin-top: 1vh;
+}
+
+.event-content p {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(108, 39, 218);
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 2.75rem;
+}
+}
+@media screen and (max-width: 1024px) {
+  .navbar a,
+  .bio .dropbutton {
+    font-size: 5.25vw;
+    padding: 3.2vw 3vw;
+  }
+
+  .dropdown-content {
+    min-width: 48vw;
+    box-shadow: 0px 0.8vw 1.6vw 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown-content a {
+    padding: 3.6vw 4.8vw;
+  }
+
+  .container {
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    height: auto; /* Adjust the height as needed */
+    background-color: rgba(144, 195, 212, 0.5);
+    
+    /* Adjust the color and opacity as desired */
+  }
+  
+  .counter {
+    font-size: 8vw;
+     /* Adjust the font size using vw units */
+    margin-top: 2rem; /* Adjust the margin as needed */
+    padding: 3px 6px; /* Adjust the padding as needed */
+    border-radius: 5px;
+    /* Apply a slight border radius for a softer look */
+  }
+  
+  .counter-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vw;
+    animation: fade-in-out 4s linear infinite;
+    opacity: 0;
+  }
+
+  .counter-label {
+padding:.5rem;
+margin-bottom: 1vh;
+font-size: 2.5rem; 
+}
+
+.timeline {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.event {
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  height: auto;
+  padding: 1rem;
+}
+
+.event-image img {
+  margin-left: 5.5vw;
+  width: 20rem;
+} 
+
+.event-content {
+  width: 100%;
+  text-align: left;
+  margin-right: 0;
+
+}
+
+.event-content h3 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #6b387e;
+  text-align: center;
+  margin-top: 1vh;
+}
+
+.event-content p {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(108, 39, 218);
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 1.75rem;
+}
+}
+
+@media screen and (max-width: 912px) {
+  .navbar a,
+  .bio .dropbutton {
+    font-size: 5.25vw;
+    padding: 3.2vw 3vw;
+  }
+
+  .dropdown-content {
+    min-width: 48vw;
+    box-shadow: 0px 0.8vw 1.6vw 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown-content a {
+    padding: 3.6vw 4.8vw;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto; /* Adjust the height as needed */
+    background-color: rgba(144, 195, 212, 0.5);
+    
+    /* Adjust the color and opacity as desired */
+  }
+  
+  .counter {
+    font-size: 8vw;
+     /* Adjust the font size using vw units */
+    margin-top: 2rem; /* Adjust the margin as needed */
+    padding: 3px 6px; /* Adjust the padding as needed */
+    border-radius: 5px;
+    /* Apply a slight border radius for a softer look */
+  }
+  
+  .counter-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vw;
+    animation: fade-in-out 4s linear infinite;
+    opacity: 0;
+  }
+
+  .counter-label {
+padding:.5rem;
+margin-bottom: 1vh;
+font-size: 2.5rem; 
+}
+
+.timeline {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.event {
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  height: auto;
+  padding: 1rem;
+}
+
+.event-image img {
+  margin-left: 5.5vw;
+  width: 20rem;
+} 
+
+.event-content {
+  width: 100%;
+  text-align: left;
+  margin-right: 0;
+
+}
+.event-content h3 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #6b387e;
+  text-align: center;
+  margin-top: 1vh;
+}
+
+.event-content p {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(108, 39, 218);
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 2.5rem;
+}
+}
+
+@media screen and (max-width: 820px) {
+  .navbar a,
+  .bio .dropbutton {
+    font-size: 5.25vw;
+    padding: 3.2vw 3vw;
+  }
+
+  .dropdown-content {
+    min-width: 48vw;
+    box-shadow: 0px 0.8vw 1.6vw 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown-content a {
+    padding: 3.6vw 4.8vw;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto; /* Adjust the height as needed */
+    background-color: rgba(144, 195, 212, 0.5);
+    
+    /* Adjust the color and opacity as desired */
+  }
+  
+  .counter {
+    font-size: 8vw;
+     /* Adjust the font size using vw units */
+    margin-top: 2rem; /* Adjust the margin as needed */
+    padding: 3px 6px; /* Adjust the padding as needed */
+    border-radius: 5px;
+    /* Apply a slight border radius for a softer look */
+  }
+  
+  .counter-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vw;
+    animation: fade-in-out 4s linear infinite;
+    opacity: 0;
+  }
+
+  .counter-label {
+padding:.5rem;
+margin-bottom: 1vh;
+font-size: 2.5rem; 
+}
+
+.timeline {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.event {
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  height: auto;
+  padding: 1rem;
+}
+
+.event-image img {
+  margin-left: 5.5vw;
+  width: 20rem;
+} 
+
+.event-content {
+  width: 100%;
+  text-align: left;
+  margin-right: 0;
+
+}
+.event-content h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #6b387e;
+  text-align: center;
+  margin-top: 1vh;
+}
+
+.event-content p {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(108, 39, 218);
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 1.5rem;
+}
+}
+@media screen and (max-width: 768px) {
+  .navbar a,
+  .bio .dropbutton {
+    font-size: 5.25vw;
+    padding: 3.2vw 3vw;
+  }
+
+  .dropdown-content {
+    min-width: 48vw;
+    box-shadow: 0px 0.8vw 1.6vw 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown-content a {
+    padding: 3.6vw 4.8vw;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto; /* Adjust the height as needed */
+    background-color: rgba(144, 195, 212, 0.5);
+    
+    /* Adjust the color and opacity as desired */
+  }
+  
+  .counter {
+    font-size: 8vw;
+     /* Adjust the font size using vw units */
+    margin-top: 2rem; /* Adjust the margin as needed */
+    padding: 3px 6px; /* Adjust the padding as needed */
+    border-radius: 5px;
+    /* Apply a slight border radius for a softer look */
+  }
+  
+  .counter-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vw;
+    animation: fade-in-out 4s linear infinite;
+    opacity: 0;
+  }
+
+  .counter-label {
+padding:.5rem;
+margin-bottom: 1vh;
+font-size: 2.5rem; 
+}
+
+.timeline {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.event {
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  height: auto;
+  padding: 1rem;
+}
+
+.event-image img {
+  margin-left: 5.5vw;
+  width: 20rem;
+} 
+
+.event-content {
+  width: 100%;
+  text-align: left;
+  margin-right: 0;
+
+}
+.event-content h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #6b387e;
+  text-align: center;
+  margin-top: -5vh;
+}
+
+.event-content p {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(108, 39, 218);
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+}
+@media screen and (max-width: 540px) {
+  .navbar a,
+  .bio .dropbutton {
+    font-size: 5.25vw;
+    padding: 3.2vw 3vw;
+  }
+
+  .dropdown-content {
+    min-width: 48vw;
+    box-shadow: 0px 0.8vw 1.6vw 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown-content a {
+    padding: 3.6vw 4.8vw;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto; /* Adjust the height as needed */
+    background-color: rgba(144, 195, 212, 0.5);
+    
+    /* Adjust the color and opacity as desired */
+  }
+  
+  .counter {
+    font-size: 8vw;
+     /* Adjust the font size using vw units */
+    margin-top: 2rem; /* Adjust the margin as needed */
+    padding: 3px 6px; /* Adjust the padding as needed */
+    border-radius: 5px;
+    /* Apply a slight border radius for a softer look */
+  }
+  
+  .counter-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vw;
+    animation: fade-in-out 4s linear infinite;
+    opacity: 0;
+  }
+
+  .counter-label {
+padding:.5rem;
+margin-bottom: 1vh;
+font-size: 2.5rem; 
+}
+
+.timeline {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.event {
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  height: auto;
+  padding: 1rem;
+}
+
+.event-image img {
+  margin-left: 5.5vw;
+  width: 12rem;
+} 
+
+.event-content {
+  width: 100%;
+  text-align: left;
+  margin-right: 0;
+
+}
+.event-content h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #6b387e;
+  text-align: center;
+  margin-top: -5vh;
+}
+
+.event-content p {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(108, 39, 218);
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+}
+@media screen and (max-width: 414px) {
+  .navbar a,
+  .bio .dropbutton {
+    font-size: 5.25vw;
+    padding: 3.2vw 3vw;
+  }
+
+  .dropdown-content {
+    min-width: 48vw;
+    box-shadow: 0px 0.8vw 1.6vw 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown-content a {
+    padding: 3.6vw 4.8vw;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto; /* Adjust the height as needed */
+    background-color: rgba(144, 195, 212, 0.5);
+    
+    /* Adjust the color and opacity as desired */
+  }
+  
+  .counter {
+    font-size: 8vw;
+     /* Adjust the font size using vw units */
+    margin-top: 2rem; /* Adjust the margin as needed */
+    padding: 3px 6px; /* Adjust the padding as needed */
+    border-radius: 5px;
+    /* Apply a slight border radius for a softer look */
+  }
+  
+  .counter-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vw;
+    animation: fade-in-out 4s linear infinite;
+    opacity: 0;
+  }
+
+  .counter-label {
+padding:.5rem;
+margin-bottom: 1vh;
+font-size: 2.5rem; 
+}
+
+.timeline {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.event {
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  height: auto;
+  padding: 1rem;
+}
+
+.event-image img {
+  margin-left: 5.5vw;
+  width: 12rem;
+} 
+
+.event-content {
+  width: 100%;
+  text-align: left;
+  margin-right: 0;
+
+}
+.event-content h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #6b387e;
+  text-align: center;
+  margin-top: -5vh;
+}
+
+.event-content p {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(108, 39, 218);
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+}
+@media screen and (max-width: 412px) {
+  .navbar a,
+  .bio .dropbutton {
+    font-size: 5.25vw;
+    padding: 3.2vw 3vw;
+  }
+
+  .dropdown-content {
+    min-width: 48vw;
+    box-shadow: 0px 0.8vw 1.6vw 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown-content a {
+    padding: 3.6vw 4.8vw;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto; /* Adjust the height as needed */
+    background-color: rgba(144, 195, 212, 0.5);
+    
+    /* Adjust the color and opacity as desired */
+  }
+  
+  .counter {
+    font-size: 8vw;
+     /* Adjust the font size using vw units */
+    margin-top: 2rem; /* Adjust the margin as needed */
+    padding: 3px 6px; /* Adjust the padding as needed */
+    border-radius: 5px;
+    /* Apply a slight border radius for a softer look */
+  }
+  
+  .counter-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vw;
+    animation: fade-in-out 4s linear infinite;
+    opacity: 0;
+  }
+
+  .counter-label {
+padding:.5rem;
+margin-bottom: 1vh;
+font-size: 2.5rem; 
+}
+
+.timeline {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.event {
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  height: auto;
+  padding: 1rem;
+}
+
+.event-image img {
+  margin-left: 5.5vw;
+  width: 12rem;
+} 
+
+.event-content {
+  width: 100%;
+  text-align: left;
+  margin-right: 0;
+
+}
+.event-content h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #6b387e;
+  text-align: center;
+  margin-top: -5vh;
+}
+
+.event-content p {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(108, 39, 218);
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+}
+@media screen and (max-width: 393px) {
+  .navbar a,
+  .bio .dropbutton {
+    font-size: 5.25vw;
+    padding: 3.2vw 3vw;
+  }
+
+  .dropdown-content {
+    min-width: 48vw;
+    box-shadow: 0px 0.8vw 1.6vw 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown-content a {
+    padding: 3.6vw 4.8vw;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto; /* Adjust the height as needed */
+    background-color: rgba(144, 195, 212, 0.5);
+    
+    /* Adjust the color and opacity as desired */
+  }
+  
+  .counter {
+    font-size: 8vw;
+     /* Adjust the font size using vw units */
+    margin-top: 2rem; /* Adjust the margin as needed */
+    padding: 3px 6px; /* Adjust the padding as needed */
+    border-radius: 5px;
+    /* Apply a slight border radius for a softer look */
+  }
+  
+  .counter-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vw;
+    animation: fade-in-out 4s linear infinite;
+    opacity: 0;
+  }
+
+  .counter-label {
+padding:.5rem;
+margin-bottom: 1vh;
+font-size: 2.5rem; 
+}
+
+.timeline {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.event {
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  height: auto;
+  padding: 1rem;
+}
+
+.event-image img {
+  margin-left: 5.5vw;
+  width: 12rem;
+} 
+
+.event-content {
+  width: 100%;
+  text-align: left;
+  margin-right: 0;
+
+}
+.event-content h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #6b387e;
+  text-align: center;
+  margin-top: -5vh;
+}
+
+.event-content p {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+}
+@media screen and (max-width: 390px) {
+  
+  .navbar a,
+  .bio .dropbutton {
+    font-size: 5.25vw;
+    padding: 3.2vw 3vw;
+  }
+
+  .dropdown-content {
+    min-width: 48vw;
+    box-shadow: 0px 0.8vw 1.6vw 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown-content a {
+    padding: 3.6vw 4.8vw;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto; /* Adjust the height as needed */
+    background-color: rgba(144, 195, 212, 0.5);
+    
+    /* Adjust the color and opacity as desired */
+  }
+  
+  .counter {
+    font-size: 8vw;
+     /* Adjust the font size using vw units */
+    margin-top: 2rem; /* Adjust the margin as needed */
+    padding: 3px 6px; /* Adjust the padding as needed */
+    border-radius: 5px;
+    /* Apply a slight border radius for a softer look */
+  }
+  
+  .counter-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vw;
+    animation: fade-in-out 4s linear infinite;
+    opacity: 0;
+  }
+
+  .counter-label {
+padding:.5rem;
+margin-bottom: 1vh;
+font-size: 2.5rem; 
+}
+
+.timeline {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.event {
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  height: auto;
+  padding: 1rem;
+}
+
+.event-image img {
+  margin-left: 5.5vw;
+  width: 12rem;
+} 
+
+.event-content {
+  width: 100%;
+  text-align: left;
+  margin-right: 0;
+
+}
+.event-content h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #6b387e;
+  text-align: center;
+  margin-top: -5vh;
+}
+
+.event-content p {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+}
+@media screen and (max-width: 375px) {
+  
+  .navbar a,
+  .bio .dropbutton {
+    font-size: 5.25vw;
+    padding: 3.2vw 3vw;
+  }
+
+  .dropdown-content {
+    min-width: 48vw;
+    box-shadow: 0px 0.8vw 1.6vw 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown-content a {
+    padding: 3.6vw 4.8vw;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto; /* Adjust the height as needed */
+    background-color: rgba(144, 195, 212, 0.5);
+    
+    /* Adjust the color and opacity as desired */
+  }
+  
+  .counter {
+    font-size: 8vw;
+     /* Adjust the font size using vw units */
+    margin-top: 2rem; /* Adjust the margin as needed */
+    padding: 3px 6px; /* Adjust the padding as needed */
+    border-radius: 5px;
+    /* Apply a slight border radius for a softer look */
+  }
+  
+  .counter-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vw;
+    animation: fade-in-out 4s linear infinite;
+    opacity: 0;
+  }
+
+  .counter-label {
+padding:.5rem;
+margin-bottom: -5vh;
+font-size: 1.5rem; 
+}
+
+.timeline {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.event {
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  height: auto;
+  padding: 1rem;
+}
+
+.event-image img {
+  margin-left: 5.5vw;
+  width: 12rem;
+} 
+
+.event-content {
+  width: 100%;
+  text-align: left;
+  margin-right: 0;
+
+}
+.event-content h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #6b387e;
+  text-align: center;
+  margin-top: -5vh;
+}
+
+.event-content p {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+}
+@media screen and (max-width: 360px) {
+  
+  .navbar a,
+  .bio .dropbutton {
+    font-size: 5.25vw;
+    padding: 3.2vw 3vw;
+  }
+
+  .dropdown-content {
+    min-width: 48vw;
+    box-shadow: 0px 0.8vw 1.6vw 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown-content a {
+    padding: 3.6vw 4.8vw;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto; /* Adjust the height as needed */
+    background-color: rgba(144, 195, 212, 0.5);
+    
+    /* Adjust the color and opacity as desired */
+  }
+  
+  .counter {
+    font-size: 8vw;
+     /* Adjust the font size using vw units */
+    margin-top: 2rem; /* Adjust the margin as needed */
+    padding: 3px 6px; /* Adjust the padding as needed */
+    border-radius: 5px;
+    /* Apply a slight border radius for a softer look */
+  }
+  
+  .counter-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vw;
+    animation: fade-in-out 4s linear infinite;
+    opacity: 0;
+  }
+
+  .counter-label {
+padding:.5rem;
+margin-bottom: .5vh;
+font-size: 1.5rem; 
+}
+
+.timeline {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.event {
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  height: auto;
+  padding: 1rem;
+}
+
+.event-image img {
+  margin-left: 5.5vw;
+  width: 12rem;
+} 
+
+.event-content {
+  width: 100%;
+  text-align: left;
+  margin-right: 0;
+
+}
+.event-content h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #6b387e;
+  text-align: center;
+  margin-top: -5vh;
+}
+
+.event-content p {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+}
+
+@media screen and (max-width: 280px) {
+
+  .navbar a,
+  .bio .dropbutton {
+    font-size: 5.25vw;
+    padding: 3.2vw 3vw;
+  }
+
+  .dropdown-content {
+    min-width: 48vw;
+    box-shadow: 0px 0.8vw 1.6vw 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown-content a {
+    padding: 3.6vw 4.8vw;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto; /* Adjust the height as needed */
+    background-color: rgba(144, 195, 212, 0.5);
+    
+    /* Adjust the color and opacity as desired */
+  }
+  
+  .counter {
+    font-size: 8vw;
+     /* Adjust the font size using vw units */
+    margin-top: 2rem; /* Adjust the margin as needed */
+    padding: 3px 6px; /* Adjust the padding as needed */
+    border-radius: 5px;
+    /* Apply a slight border radius for a softer look */
+  }
+  
+  .counter-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vw;
+    animation: fade-in-out 4s linear infinite;
+    opacity: 0;
+  }
+
+  .counter-label {
+padding:.5rem;
+margin-bottom: -5vh;
+font-size: 1.5rem; 
+}
+
+.timeline {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.event {
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  height: auto;
+  padding: 1rem;
+}
+
+.event-image img {
+  margin-left: 5.5vw;
+  width: 12rem;
+} 
+
+.event-content {
+  width: 100%;
+  text-align: left;
+  margin-right: 0;
+
+}
+.event-content h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #6b387e;
+  text-align: center;
+  margin-top: -5vh;
+}
+
+.event-content p {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+
+
+}
+
+

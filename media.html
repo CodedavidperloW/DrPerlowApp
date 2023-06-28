@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Rubik:wght@700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Dancing+Script&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Rubik:wght@700&display=swap');
+    </style>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="media.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="media.html">Media</a>
+        <a href="contact.html">Contact</a>
+        <div class="bio">
+            <button class="dropbutton">Bio
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="career2.html">Career</a>
+                <a href="legal.html">Legal</a>
+            </div>
+        </div>
+    </div>
+    <div class="video-wrapper">
+        <div id="videoPlayer" class="video">
+            <a href="https://www.youtube.com/watch?v=zlcQKLQTZrI">
+                <img src="TVinterview.jpeg" alt="Interview on TV" title="Interview on Channel 3 Arizona">
+            </a>
+        </div>
+    </div>
+    <div>
+        <p class="special-note">To our guardan angel-<br>
+            Our heartfelt thanks for bringing our three precious miracles into the world.<br>
+            With much love,<br>
+            The Weiss Family</p>
+    </div>
+    <div id="container">
+        <div id="slideshow-container">
+            <img src="WebDelivery.jpeg" alt="Web Recorded Delivery" title="3 million viewers for First Online Delivery">
+            <img src="Surgery.jpeg" alt="Surgery" title="In the Delivery Room">
+            <img src="Kiss.jpeg" alt="Mother Kissing Baby after Delivery" title="First Kiss after Baby Born">
+            <img src="CarePatient.jpeg" alt="smiling with patient" title="Best in Patient Care">
+            <img src="Volunteer.jpeg" alt="Medical Volunteer" title="Medical Volunteer">
+            <img src="PublicSpeaking.jpeg" alt="Public Speaking at March of Dimes"
+                title="Public Speaking at March of Dimes">
+            <img src="Deliveryroom.jpeg" alt="Delivery Room" title="Miracle in Delivery Room">
+        </div>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="jsmedia.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!----Footer Below----->
+<!-- <footer class="footer-distributed">
+    
+        <div class="footer-left">
+            
+            <h3>Dr.Perlow</h3>
+            
+            <p class="footer-links">
+                <a href="index.html" class="link-1">Home</a>
+
+                <a href="FAQ.html">Faq</a>
+
+                <a href="contact.html">Contact</a>
+            </p>
+
+            <p class="footer-company-name">Dr. Jordan Perlow LLC © 2023</p>
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>2622 N. 65th Way</span> Scottsdale, AZ 85266</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>602.791.3101</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:jhpmfmmd@msn.com">jhpmfmmd@msn.com</a></p>
+            </div>
+
+        </div> -->
+
+<!-- <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>Brief Bio</span>
+                Dr. Jordan Perlow, MD is a Maternal-Fetal Medicine Specialist in Mesa, AZ and has over 36 years of
+                experience in the medical field. He graduated from Northwestern U, School of Medicine in 1986.
+            </p>
+
+        </div>
+CSS For the Footer
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+	font-family: Open Sans;
+}
+footer{
+	position:fixed;
+	bottom:0;
+	width: 100%;
+height: 100px;}
+
+.footer-distributed {
+	background: #666;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3 {
+	color: #ffffff;
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+	color: #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a {
+	display: inline-block;
+	line-height: 1.8;
+	font-weight: 400;
+	text-decoration: none;
+	color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+	color: #222;
+	font-size: 14px;
+	font-weight: normal;
+	margin-bottom: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+	width: 35%;
+}
+
+.footer-distributed .footer-center i {
+	background-color: #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 2px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+	display: inline-block;
+	color: #ffffff;
+	font-weight: 400;
+	vertical-align: middle;
+	margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+	display: block;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+	color: lightseagreen;
+	text-decoration: none;
+	;
+}
+
+.footer-distributed .footer-links a:before {
+	content: "|";
+	font-weight: 300;
+	font-size: 20px;
+	left: 0;
+	color: #fff;
+	display: inline-block;
+	padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+	content: none;
+}
+
+
+.footer-links:hover {
+	font-size: 24px;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+	line-height: 20px;
+	color: #92999f;
+	font-size: 18px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+	display: block;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color: #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed {
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right {
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i {
+		margin-left: 0;
+	}
+
+}
+    </footer> -->

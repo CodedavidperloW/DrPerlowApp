@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Rubik:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Rubik:wght@700&display=swap');
+    </style>
+    <link rel="stylesheet" type="text/css" href="contact.css">
+</head>
+
+<body>
+
+    <!------
+    <div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#news">News</a>
+
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>
+</div>
+    -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="media.html">Media</a>
+        <a href="contact.html">Contact</a>
+        <div class="bio">
+            <button class="dropbutton">Bio
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="career2.html">Career</a>
+                <a href="legal.html">Legal</a>
+            </div>
+        </div>
+    </div>
+    <!--- <div id="heading">
+        <h1>Thank you for contacting Dr. Perlow, please fill in the form and click the submit button at the bottom of
+            the
+            page.
+        </h1>
+    </div>-->
+
+    <div class="containerA">
+        <img src="DadWithBabyPresley.jpg">
+    </div>
+    <div class="note">
+        <p class="note-style">
+            Be in touch
+        </p>
+    </div>
+
+    <div id="contact-form">
+        <form method="GET">
+            <p class="container">
+                First Name: <input type="text" required name="FirstName"><br>
+                Last Name: <input type="text" required name="LastName"><br>
+                Email: <input type="email" required name="email"><br>
+            </p>
+
+            <p class="container-a">
+                Reason for contacting Dr. Perlow:
+                <select name="Reason">
+                    <option value="Defense">Defense Witness</option>
+                    <option value="Offense">Review a Case</option>
+                    <option value="Consultation">Consultation</option>
+                    <option value="Interview">Media Interview</option>
+                    <option value="Speaking">Guest Speaking</option>
+                </select><br>
+            </p>
+
+            <p class="container-b">
+                <br>How do you prefer to meet with Dr. Perlow?<br>
+                <input type="radio" name="Zoom" value="Zoom">Zoom<br>
+                <input type="radio" name="Phone" value="Phone">Phone<br>
+                <input type="radio" name="Office" value="Office">Office<br>
+            </p>
+
+            <p class="container-e">"Thank you for contacting Dr. Perlow. To assist him in better understanding your
+                needs and providing the appropriate assistance, we kindly request that you briefly explain the reason
+                you are contacting him. This will enable him to address your concerns effectively and offer the best
+                possible care. We appreciate your cooperation and look forward to assisting you." <br>
+                <input type="text" maxlength="200" name="reason"><br>
+            </p>
+
+            <p class="container-f">
+                <input type="submit" value="Submit">
+                <input type="Reset">
+            </p>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
